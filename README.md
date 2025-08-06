@@ -1,87 +1,111 @@
+## TechNova Flask App – DevOps Pipeline Project
 
-> TechNova Flask App
+>  Live Demo: [http://65.2.5.42](http://65.2.5.42)
 
-This is a simple Dockerized Flask application built as part of the **TechNova DevOps Internship Project** by a 5-member team.
+A Dockerized Flask application deployed to AWS EC2 via Terraform and Jenkins CI/CD.
 
-The app serves a basic "Hello, TechNova!" page and is integrated with DockerHub and GitHub, and will be deployed via Jenkins CI/CD.
+###  Project Overview
 
-> Project Structure
+This is a team DevOps project demonstrating the end-to-end CI/CD workflow using:
+
+*  **Flask** for the web application
+*  **Docker** for containerization
+*  **AWS EC2** for hosting
+*  **Terraform** for infrastructure provisioning
+*  **Jenkins** for CI/CD automation
+*  **DockerHub** for image registry
+
+###  Features
+
+* “Hello, TechNova” Flask homepage
+* Dockerfile + .dockerignore configured
+* CI/CD pipeline builds and pushes image
+* Terraform provisions EC2 and auto-deploys container
+* Team-based collaboration on GitHub
+
+---
+
+###  Project Structure
 
 ```
-technova\_flask\_app/
-├── app.py 
-├── requirements.txt 
-├── Dockerfile 
-├── Jenkinsfile 
-├── .dockerignore 
-├── .gitignore 
-└── README.md 
+technova_flask_app/
+│
+├── app.py                  # Flask app
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Docker build config
+├── .dockerignore           # Ignore files for Docker build
+├── Jenkinsfile             # CI/CD pipeline config
+├── README.md               # Project overview
+└── technova_terraform/     # Terraform infra
+    ├── main.tf
+    ├── outputs.tf
+```
 
-````
+---
 
-> Tech Stack
+###  Deployment Pipeline
 
-- **Python 3.9**
-- **Flask** micro web framework
-- **Docker** for containerization
-- **GitHub** for version control
-- **DockerHub** for image registry
-- **Jenkins** for CI/CD pipeline
+1. **GitHub Commit** ➝ triggers Jenkins job
+2. **Jenkins** builds Docker image
+3. Image is pushed to [DockerHub](https://hub.docker.com/r/manasvikakar/technova_app)
+4. **Terraform** is executed via Jenkins to:
 
-
->Live Preview
->> Coming soon! Jenkins deployment to EC2 is in progress.
+   * Provision an EC2 instance
+   * Install Docker
+   * Run the latest image
 
 
->> Running Locally
+### Technologies Used
 
->>> 1. Clone the repository  
+| Tool          | Purpose                              |
+| ------------- | ------------------------------------ |
+| **Flask**     | Python Web Framework                 |
+| **Docker**    | Containerization                     |
+| **DockerHub** | Image Registry                       |
+| **Terraform** | Infrastructure as Code (IaC)         |
+| **AWS EC2**   | Cloud Hosting                        |
+| **Jenkins**   | CI/CD Automation                     |
+| **GitHub**    | Version Control & Team Collaboration |
+
+
+###  How to Run Locally
+
+```bash
 git clone https://github.com/manasvi-kakar/technova_flask_app.git
 cd technova_flask_app
-
->>> 2. Install dependencies
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-
-
->>> 3. Run the Flask app
 python app.py
+```
 
-Then open: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+### Live Project
 
-
-> Running with Docker
-
->>> 1. Build the Docker image
-docker build -t technova_app .
+**Hosted URL:**
+ [http://65.2.5.42](http://65.2.5.42)
 
 
->>> 2. Run the container
-docker run -p 5000:5000 technova_app
+###  Team Members
+
+| Name          | Role                         |
+| ------------- | ---------------------------- |
+| Manasvi Kakar | DevOps, Terraform, DockerHub |
+| Lakshay Yadav | CI/CD with Jenkins           |
+| Sumit Singh   | Jenkins configuration        |
+| Isha Jain     | AWS support                  |
+| Anshika Rai   | Testing & validation         |
 
 
-Then go to: [http://localhost:5000](http://localhost:5000)
+
+### Acknowledgements
+
+Thanks to mentors and Xebia for guidance on this DevOps Internship Project.
 
 
+###  License
 
->> DockerHub Image
+This project is for educational and internship purposes.
 
-Pull the image directly from DockerHub:
 
-docker pull manasvikakar/technova_app:latest
-
-🔗 [DockerHub Repo](https://hub.docker.com/r/manasvikakar/technova_app)
-
->> CI/CD Pipeline (Jenkins)
-This project is set up with a full CI/CD pipeline using Jenkins, including:
-
-> Build on every main branch push
-
-> Build Docker image from Dockerfile
-
-> Push to DockerHub
-
-> Deploy to cloud server 
-
-Jenkinsfile is included in the root directory and defines all stages.
 
 
