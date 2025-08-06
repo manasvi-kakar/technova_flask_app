@@ -30,13 +30,13 @@ This is a team DevOps project demonstrating the end-to-end CI/CD workflow using:
 ```
 technova_flask_app/
 │
-├── app.py                  # Flask app
-├── requirements.txt        # Python dependencies
-├── Dockerfile              # Docker build config
-├── .dockerignore           # Ignore files for Docker build
-├── Jenkinsfile             # CI/CD pipeline config
-├── README.md               # Project overview
-└── technova_terraform/     # Terraform infra
+├── app.py                  
+├── requirements.txt        
+├── Dockerfile              
+├── .dockerignore           
+├── Jenkinsfile            
+├── README.md
+└── technova_terraform/     
     ├── main.tf
     ├── outputs.tf
 ```
