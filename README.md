@@ -90,10 +90,10 @@ python app.py
 | Name          | Role                         |
 | ------------- | ---------------------------- |
 | Manasvi Kakar | DevOps, Terraform, DockerHub |
-| Lakshay Yadav | CI/CD with Jenkins           |
-| Sumit Singh   | Jenkins configuration        |
-| Isha Jain     | AWS support                  |
-| Anshika Rai   | Testing & validation         |
+| Anshika Rai   | CI/CD with Jenkins           |
+| Isha Jain     | Jenkins configuration        |
+| Sumit         | AWS support                  |
+| Lakshay Yadav | Testing & validation         |
 
 
 
