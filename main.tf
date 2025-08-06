@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 variable "key_name" {
-  default = "my-key.pem"
+  default = "mywebserver-01.pem"
 }
 
 resource "tls_private_key" "rsa_4096" {
@@ -23,7 +23,7 @@ resource "tls_private_key" "rsa_4096" {
 }
 
 resource "aws_key_pair" "key_pair" {
-  key_name   = "key-pair-2.pem"
+  key_name   = "mywebserver-01.pem"
     public_key = tls_private_key.rsa_4096.public_key_openssh
 }
 
@@ -60,7 +60,7 @@ resource "aws_security_group" "sg_ec2" {
 }
 
 resource "aws_instance" "public_instance" {
-  ami                    = "ami-0f918f7e67a3323f0"
+  ami                    = "ami-0d54604676873b4ec"
   instance_type          = "t3.micro"
   key_name               = aws_key_pair.key_pair.key_name
   vpc_security_group_ids = [aws_security_group.sg_ec2.id]
