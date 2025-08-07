@@ -10,25 +10,25 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t technova_app .'
+                bat 'docker build -t technova_app .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
                 script {
-                    sh 'docker tag technova_app lakshay276/technova_app:latest'
+                    bat 'docker tag technova_app lakshay276/technova_app:latest'
                     
-                    sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                    bat 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
 
-                    sh 'docker push lakshay276/technova_app:latest'
+                    bat 'docker push lakshay276/technova_app:latest'
                 }
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 5000:5000 technova_app'
+                bat 'docker run -d -p 5000:5000 technova_app'
             }
         }
     }
