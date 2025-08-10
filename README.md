@@ -92,7 +92,7 @@ python app.py
 | ------------- | ---------------------------- |
 | Manasvi Kakar | DevOps, Terraform, DockerHub |
 | Anshika Rai   | CI/CD with Jenkins           |
-| Isha Jain     | Jenkins configuration        |
+| Isha Jain     | Jenkins configuration,AWS    |
 | Sumit         | AWS support                  |
 | Lakshay Yadav | Testing & validation         |
 
