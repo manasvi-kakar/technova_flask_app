@@ -88,13 +88,13 @@ python app.py
 
 ###  Team Members
 
-| Name          | Role                                             |
-| ------------- | -------------------------------------------------|
-| Manasvi Kakar | DevOps, DockerHub, Docker containerisation , Git |
-| Anshika Rai   | CI/CD with Jenkins for AWS integration           |
-| Isha Jain     | Jenkins configuration, AWS credentials plugin    |
-| Sumit         | AWS support , AWS EC2 , Jenkins Configuration    |
-| Lakshay Yadav | Terraform EC2 creation , image registry, testing |
+| Name          | Role                                                |
+| ------------- | ----------------------------------------------------|
+| Manasvi Kakar | DevOps, DockerHub, Docker containerisation , Git    |
+| Anshika Rai   | CI/CD with Jenkins for AWS & Jenkins pipeline plugin|
+| Isha Jain     | Jenkins configuration, AWS credentials plugin       |
+| Sumit         | AWS support , AWS EC2 , Jenkins Configuration       |
+| Lakshay Yadav | Terraform EC2 creation , image registry, testing    |
 
 
 
